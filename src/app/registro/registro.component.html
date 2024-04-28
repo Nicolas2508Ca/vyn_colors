@@ -1,0 +1,48 @@
+<section class="login">
+    <div class="login_title">Registrate</div>
+    <form action="/validar" class="form-cadastro" data-form method="post">
+      <input
+        class="login_input__nombre"
+        type="text"
+        name="nom"
+        id="nom"
+        placeholder="Nombres y Apellidos"
+        required
+      />
+      <input
+        class="login_input__cedula"
+        type="number"
+        name="ced"
+        id="ced"
+        placeholder="Cedula"
+        required
+      />
+      <input
+        class="login_input__email"
+        type="email"
+        name="correo"
+        id="correo"
+        placeholder="Email"
+        required
+        data-email
+      />
+      <input
+        class="login_input__telefono"
+        type="number"
+        name="tel"
+        id="tel"
+        placeholder="Phone"
+        required
+      />
+      <input
+        class="login_input__contraseña"
+        type="password"
+        name="pass"
+        id="pass"
+        placeholder="Contraseña"
+        required
+        data-password
+      />
+      <button type="submit" value="Registrar" class="login_btn">Completar registro</button>
+    </form>
+</section>

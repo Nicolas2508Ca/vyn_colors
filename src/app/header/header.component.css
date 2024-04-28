@@ -1,0 +1,180 @@
+header 
+{
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: linear-gradient(-45deg, rgb(230, 126, 225), rgb(207, 69, 200));
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite;
+  position: sticky;
+  top: 0;
+}
+
+@-webkit-keyframes gradient 
+{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient 
+{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+nav
+{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo
+{
+  display: flex;
+  width: 60%;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.logo_destaque :hover
+{
+  cursor: pointer;
+}
+
+.logo input
+{
+  width: 90%;
+  margin-right: 6%;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(242, 207, 242);
+  padding-left: 3%;
+  background-image: url("../../assets/lupa.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 90%;
+}
+
+.logo input
+{
+  outline: none;
+}
+
+.logo_destaque
+{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(242, 207, 242);
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  margin-right: 6%;
+  padding-right: 3%;
+  border: 3px solid black;
+  margin-left: 2%;
+}
+
+.logo_destaque p
+{
+  font-size: 150%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.logo img
+{
+  width: 20%;
+  margin-right: 2%;
+}
+
+.list
+{
+  width: 35%;
+}
+.list_menu
+{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.list_menu_item
+{
+  color: black;
+  margin-right: 6%;
+  font-size: 110%;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.list_menu_item a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+.list_menu_item :hover
+{
+  cursor: pointer;
+}
+
+.user{
+  margin-right: 3%;
+}
+
+.user:hover{
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(242, 207, 242);
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px; /* Ajusta esto según tus necesidades */
+}
+
+.user_list_name{
+  display: flex;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+.user_list{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(230, 126, 225);
+  padding-top: 4%;
+  padding-bottom: 4%;
+  font-size: 100%;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid black;
+}

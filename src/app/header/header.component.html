@@ -1,0 +1,34 @@
+<header>
+    <nav>
+        <div (click)="navigateToHome()" class="logo">
+            <div id="refresh" class="logo_destaque">
+                <img src="../../assets/logo.png" alt="logo" />
+                <p class="logo-azul">V&N Colors</p>
+            </div>
+            <input type="text" placeholder="Qué deseas buscar?"/>
+        </div>
+
+        <div class="list">
+            <ul class="list_menu">
+                <li class="list_menu_item"><a routerLink="/" class="list_menu_itemlink">Inicio</a></li>
+                <li class="list_menu_item"><a routerLink="/login" class="list_menu_itemlink">Login</a></li>
+                <li class="list_menu_item"><a routerLink="/" class="list_menu_itemlink">Productos</a></li>
+            </ul>
+        </div>
+        <div class="user" (click)="toggleMenu()">
+            <img src="../../assets/usuario.png" alt="perfil" />
+            <div class="dropdown-menu" *ngIf="menuOpen">
+              <div *ngIf="isLoggedIn; else notLoggedIn">
+                <a class="user_list_name">{{Nombre | uppercase}}</a>
+                <a class="user_list" routerLink="/">Perfil</a>
+                <a class="user_list" routerLink="/">Tus compras</a>
+                <a class="user_list" routerLink="/">Opiniones</a>
+                <!-- Añade más opciones aquí -->
+              </div>
+              <ng-template #notLoggedIn>
+                <a class="user_list" routerLink="/login">Iniciar sesión</a>
+              </ng-template>
+            </div>
+          </div>
+    </nav>
+</header> 

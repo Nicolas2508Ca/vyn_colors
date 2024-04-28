@@ -1,0 +1,29 @@
+<section class="login">
+    <div class="login_title">
+        Iniciar Sesión
+    </div>
+    <form action="/login" method="post" class="form-cadastro" data-form>
+        <input
+        class="login_input__url"
+        type="number"
+        placeholder="Escriba su numero de cedula"
+        name="cedula"
+        id="cedula"
+        [(ngModel)]="cedula"
+        required
+        />
+        <input
+        class="login_input__name"
+        type="password"
+        placeholder="Escriba su contraseña"
+        name="pass"
+        id="pass"
+        [(ngModel)]="contrasenia"
+        required
+        data-password
+        />
+        <button (click)="login()" type="submit" value="Iniciar Sesión" class="login_btn">Entrar</button>
+    </form>
+    <a routerLink="/registro" class="login_registro">¿Aun no tienes una cuentra? Registrate!!</a>
+</section>
+
