@@ -1,0 +1,29 @@
+.productos
+{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productos_titulo
+{
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 4%;
+  text-align: center;
+  font-size: 200%;
+}
+
+.box-producto{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+
+.productos_imagenes_list
+{
+  width: 15%;
+}
+

@@ -1,0 +1,24 @@
+<section class="productos">
+    <div class="productos_titulo">
+        <h1>productos</h1>
+    </div>
+
+    <div class="productos_imagenes">
+        <div class="box-producto" *ngFor="let producto of producto">
+            <img
+                class="productos_imagenes_list"
+                [src]="producto.src"
+                [alt]="producto.alt"
+            />
+            <div class="info_producto">
+                <div class="info_producto_titulo1">
+                    <h2>{{ producto.titulo }}</h2>
+                </div>
+                <div class="info_producto_descripcion1">
+                    <p>{{ producto.descripcion }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>

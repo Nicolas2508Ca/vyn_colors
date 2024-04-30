@@ -35,10 +35,12 @@ export class HeaderComponent {
 
   ngOnInit() {
     // Verificar el estado de la sesión en el localStorage cuando se carga la página
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
-    if (isLoggedIn === 'true') {
-      HeaderComponent.isLoggedIn = true;
-      HeaderComponent.menuOpen = true;
+    if (typeof localStorage !== 'undefined') {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (isLoggedIn === 'true') {
+        HeaderComponent.isLoggedIn = true;
+        HeaderComponent.menuOpen = true;
+      }
     }
   }
 }
