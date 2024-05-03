@@ -1,10 +1,10 @@
 <section class="productos">
     <div class="productos_titulo">
-        <h1>productos</h1>
+        <h1>Productos</h1>
     </div>
 
     <div class="productos_imagenes">
-        <div class="box-producto" *ngFor="let producto of producto">
+        <div class="box-producto" *ngFor="let producto of productos">
             <img
                 class="productos_imagenes_list"
                 [src]="producto.src"
@@ -17,6 +17,7 @@
                 <div class="info_producto_descripcion1">
                     <p>{{ producto.descripcion }}</p>
                 </div>
+                <button class="Boton_Agregar" (click)="agregarAlCarrito(producto)">Agregar al carrito</button>
             </div>
         </div>
     </div>

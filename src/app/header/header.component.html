@@ -1,34 +1,50 @@
 <header>
-    <nav>
-        <div (click)="navigateToHome()" class="logo">
-            <div id="refresh" class="logo_destaque">
-                <img src="../../assets/logo.png" alt="logo" />
-                <p class="logo-azul">V&N Colors</p>
-            </div>
-            <input type="text" placeholder="Qué deseas buscar?"/>
-        </div>
+  <nav>
+    <div class="logo">
+      <div id="refresh" class="logo_destaque" (click)="navigateToHome()">
+        <img src="../../assets/logo.png" alt="logo" />
+        <p class="logo-azul">V&N Colors</p>
+      </div>
+      <input type="text" placeholder="Qué deseas buscar?" />
+    </div>
 
-        <div class="list">
-            <ul class="list_menu">
-                <li class="list_menu_item"><a routerLink="/" class="list_menu_itemlink">Inicio</a></li>
-                <li class="list_menu_item"><a routerLink="/login" class="list_menu_itemlink">Login</a></li>
-                <li class="list_menu_item"><a routerLink="/productos" class="list_menu_itemlink">Productos</a></li>
-            </ul>
+    <div class="list">
+      <ul class="list_menu">
+        <li class="list_menu_item"><a routerLink="/" class="list_menu_itemlink">Inicio</a></li>
+        <li class="list_menu_item"><a routerLink="/login" class="list_menu_itemlink">Login</a></li>
+        <li class="list_menu_item"><a routerLink="/productos" class="list_menu_itemlink">Productos</a></li>
+      </ul>
+    </div>
+
+      <div class="carrito" >
+        <img src="../../assets/Carrito.png" alt="Carrito" (click)="mostrarCarrito()" />
+        <div class="carrito-panel" [ngClass]="{ 'active': carritoOpen }">
+          <h3>Productos en el carro: </h3>
+          <ul>
+            <li>Producto 1</li>
+            <li>Producto 2</li>
+            <!-- Agrega más elementos de la lista aquí -->
+          </ul>
+          <button routerLink="/pago">Ir al pago</button>
         </div>
-        <div class="user" (click)="toggleMenu()">
-            <img src="../../assets/usuario.png" alt="perfil" />
-            <div class="dropdown-menu" *ngIf="menuOpen">
-              <div *ngIf="isLoggedIn; else notLoggedIn">
-                <a class="user_list_name">{{Nombre | uppercase}}</a>
-                <a class="user_list" routerLink="/">Perfil</a>
-                <a class="user_list" routerLink="/">Tus compras</a>
-                <a class="user_list" routerLink="/">Opiniones</a>
-                <!-- Añade más opciones aquí -->
-              </div>
-              <ng-template #notLoggedIn>
-                <a class="user_list" routerLink="/login">Iniciar sesión</a>
-              </ng-template>
-            </div>
+      </div>
+
+      <div class="user" (click)="toggleMenu()">
+        <img src="../../assets/usuario.png" alt="perfil" />
+        <div class="dropdown-menu" *ngIf="menuOpen">
+          <div *ngIf="isLoggedIn; else notLoggedIn">
+            <a class="user_list_name">{{Nombre | uppercase}}</a>
+            <a class="user_list" routerLink="/">Perfil</a>
+            <a class="user_list" routerLink="/">Tus compras</a>
+            <a class="user_list" routerLink="/">Opiniones</a>
           </div>
-    </nav>
-</header> 
+
+          <ng-template #notLoggedIn>
+            <a class="user_list" routerLink="/login">Iniciar sesión</a>
+          </ng-template>
+        </div>
+      </div>
+
+    
+  </nav>
+</header>

@@ -12,6 +12,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { FormsModule } from '@angular/forms';
 import { ProductosComponent } from './productos/productos.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

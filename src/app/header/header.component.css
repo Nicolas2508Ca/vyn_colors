@@ -178,3 +178,32 @@ nav
   font-family: 'Courier New', Courier, monospace;
   border: 2px solid black;
 }
+
+.carrito img {
+  width: 30px;  
+}
+
+.carrito {
+  display: flex;
+  position: relative; 
+  cursor: pointer; 
+  margin-right: 35px;
+}
+
+.carrito-panel {
+  position: absolute;
+  top: calc(100% + 10px); /* Posiciona el menú debajo del icono del carrito */
+  left: 0; /* Lo alinea a la izquierda */
+  z-index: 1; /* Asegura que esté encima del resto del contenido */
+  background-color: #fff; /* Color de fondo */
+  border: 1px solid #ccc; /* Borde */
+  padding: 10px; /* Espaciado interno */
+  display: none; /* Oculta el menú por defecto */
+}
+
+/* Estilos para mostrar el menú */
+.carrito-panel.active {
+  display: block; /* Muestra el menú cuando tiene la clase "active" */
+}
+
+
