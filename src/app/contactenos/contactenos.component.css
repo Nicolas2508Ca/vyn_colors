@@ -95,5 +95,6 @@ input, textarea {
   font-family: 'Courier New', Courier, monospace;
   border-radius: 40px;
   font-size: 110%;
+  cursor: pointer;
 }
 

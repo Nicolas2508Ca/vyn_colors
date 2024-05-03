@@ -31,11 +31,12 @@ export class HeaderComponent implements AfterViewInit {
 
   mostrarCarrito() {
     this.carritoOpen = !this.carritoOpen;
-    // No necesitas acceder a carritoProductos directamente
-    // Puedes usar métodos del servicio CarritoComprasService para obtener información sobre el carrito
-    // Por ejemplo:
-    // const productosEnCarrito = this.carritoService.obtenerProductosEnCarrito();
-    // console.log('Productos en el carrito:', productosEnCarrito);
+    const productosEnCarrito = this.carritoService.obtenerProductos();
+    console.log('Productos en el carrito:', productosEnCarrito);
+  }
+  
+  navigateToCarrito() {
+    this.router.navigate(['/carrito']);
   }
 
   get isLoggedIn() {

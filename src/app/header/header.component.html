@@ -16,35 +16,29 @@
       </ul>
     </div>
 
-      <div class="carrito" >
-        <img src="../../assets/Carrito.png" alt="Carrito" (click)="mostrarCarrito()" />
-        <div class="carrito-panel" [ngClass]="{ 'active': carritoOpen }">
-          <h3>Productos en el carro: </h3>
-          <ul>
-            <li>Producto 1</li>
-            <li>Producto 2</li>
-            <!-- Agrega más elementos de la lista aquí -->
-          </ul>
-          <button routerLink="/pago">Ir al pago</button>
-        </div>
+    <div class="carrito">
+      <img src="../../assets/Carrito.png" alt="Carrito" (click)="mostrarCarrito()" />
+      <div class="carrito-panel" [ngClass]="{ 'active': carritoOpen }">
+        <h3>Productos en el carrito:</h3>
+        <!-- Agrega aquí el contenido del carrito -->
+        <button (click)="navigateToCarrito()">Ir al carrito</button>
       </div>
+    </div>
 
-      <div class="user" (click)="toggleMenu()">
-        <img src="../../assets/usuario.png" alt="perfil" />
-        <div class="dropdown-menu" *ngIf="menuOpen">
-          <div *ngIf="isLoggedIn; else notLoggedIn">
-            <a class="user_list_name">{{Nombre | uppercase}}</a>
-            <a class="user_list" routerLink="/">Perfil</a>
-            <a class="user_list" routerLink="/">Tus compras</a>
-            <a class="user_list" routerLink="/">Opiniones</a>
-          </div>
-
-          <ng-template #notLoggedIn>
-            <a class="user_list" routerLink="/login">Iniciar sesión</a>
-          </ng-template>
+    <div class="user" (click)="toggleMenu()">
+      <img src="../../assets/usuario.png" alt="perfil" />
+      <div class="dropdown-menu" *ngIf="menuOpen">
+        <div *ngIf="isLoggedIn; else notLoggedIn">
+          <a class="user_list_name">{{Nombre | uppercase}}</a>
+          <a class="user_list" routerLink="/perfil">Perfil</a>
+          <a class="user_list" routerLink="/compras">Tus compras</a>
+          <a class="user_list" routerLink="/">Opiniones</a>
         </div>
-      </div>
 
-    
+        <ng-template #notLoggedIn>
+          <a class="user_list" routerLink="/login">Iniciar sesión</a>
+        </ng-template>
+      </div>
+    </div>
   </nav>
 </header>

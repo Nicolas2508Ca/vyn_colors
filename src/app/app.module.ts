@@ -11,6 +11,11 @@ import { RegistroComponent } from './registro/registro.component';
 
 import { FormsModule } from '@angular/forms';
 import { ProductosComponent } from './productos/productos.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { ComprasComponent } from './compras/compras.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { InfoMarcaComponent } from './info-marca/info-marca.component';
+
 
 
 @NgModule({
@@ -22,6 +27,10 @@ import { ProductosComponent } from './productos/productos.component';
     PrincipalComponent,
     RegistroComponent,
     ProductosComponent,
+    PerfilComponent,
+    ComprasComponent,
+    CarritoComponent,
+    InfoMarcaComponent,
   ],
   imports: [
     BrowserModule,

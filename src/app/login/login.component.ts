@@ -14,7 +14,7 @@ export class LoginComponent {
   login() {
     console.log('Cedula:', this.cedula);
     console.log('Contrasenia:', this.contrasenia);
-    if (this.cedula == '123456789'  && this.contrasenia == '123456789' ) {
+    if (this.cedula == '12345'  && this.contrasenia == '12345' ) {
       HeaderComponent.isLoggedIn = true;
       HeaderComponent.menuOpen = true;
       alert('Bienvenido');

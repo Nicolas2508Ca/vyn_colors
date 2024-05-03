@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+</head>
+<body>
+
+<div class="container_perfil">
+  <h1>Perfil de Usuario</h1>
+  <form id="userProfileForm">
+    <div>
+      <label>Nombre:</label>
+      <span id="firstName">Nombre del usuario</span>
+    </div>
+
+    <div>
+      <label>Apellido:</label>
+      <span id="lastName">Apellido del usuario</span>
+    </div>
+
+    <div>
+      <label>Correo electrónico:</label>
+      <span id="email">Correo electrónico del usuario</span>
+    </div>
+
+    <div>
+      <label>Contraseña:</label>
+      <span id="password">Contraseña del usuario</span>
+    </div>
+
+    <button type="button" onclick="editProfile()">Editar</button>
+
+    <button type="submit" id="saveButton" style="display: none;">Guardar</button>
+  </form>
+</div>
+

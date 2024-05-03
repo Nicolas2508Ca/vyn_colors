@@ -34,6 +34,9 @@
 .info_producto_descripcion1{
   font-family: 'Courier New', Courier, monospace;
 }
+.info_precio_producto{
+  font-family: 'Courier New', Courier, monospace;
+}
 .Boton_Agregar{
   width: 100%;
   margin-bottom: 5px;
