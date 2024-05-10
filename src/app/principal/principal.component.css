@@ -89,3 +89,18 @@
   font-family: 'Courier New', Courier, monospace;
   border-radius: 40px;
 }
+
+.whatsapp-logo{
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 9999; 
+}
+.whatsapp-logo img {
+  width: 76px; 
+  height: auto;
+}
+
+.whatsapp-logo:hover {
+  opacity: 0.7; 
+}
