@@ -15,7 +15,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { ComprasComponent } from './compras/compras.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { InfoMarcaComponent } from './info-marca/info-marca.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,7 +35,8 @@ import { InfoMarcaComponent } from './info-marca/info-marca.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
